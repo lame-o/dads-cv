@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from '@/components/ui/buttons'
+import { ArrowUpRight } from 'lucide-react'
+import {Linkedin} from 'lucide-react' 
+import {LifeBuoy} from 'lucide-react'
+import {Waves} from 'lucide-react'
 
 export default function Home() {
   return (
@@ -18,13 +23,40 @@ export default function Home() {
           </div>
           <div className="md:w-2/3">
             <h1 className="text-4xl font-bold mb-4">Ryan H. Dwight, PhD</h1>
-            <p className="mb-2 font-medium">Huntington Beach, California</p>
-            <div className="mb-4 space-x-4">
-              <Link href="https://linkedin.com/in/ryan-dwight-04155429" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300">LinkedIn</Link>
-              <Link href="https://www.graduateresearchcoach.com/" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300">Graduate Research Coach</Link>
-              <Link href="https://coastalwaterresearch.com/" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300">Coastal Water Research Group</Link>
+            <p className="mb-2 font-medium">Huntington Beach, California 🌴</p>
+            <div className="mb-4 flex flex-wrap gap-3">
+              <Button 
+                asChild 
+                variant="outline" 
+                effect="expandIcon" 
+                icon={Linkedin} 
+                iconPlacement="right"
+                className="rounded-full bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 hover:border-blue-300"
+              >
+                <Link href="https://linkedin.com/in/ryan-dwight-04155429">LinkedIn</Link>
+              </Button>
+              <Button 
+                asChild 
+                variant="outline" 
+                effect="expandIcon" 
+                icon={LifeBuoy} 
+                iconPlacement="right"
+                className="rounded-full bg-orange-50 border-orange-200 text-orange-600 hover:bg-orange-100 hover:border-orange-300"
+              >
+                <Link href="https://www.graduateresearchcoach.com/">Graduate Research Coach</Link>
+              </Button>
+              <Button 
+                asChild 
+                variant="outline" 
+                effect="expandIcon" 
+                icon={Waves} 
+                iconPlacement="right"
+                className="rounded-full bg-teal-50 border-teal-200 text-teal-600 hover:bg-teal-100 hover:border-teal-300"
+              >
+                <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
+              </Button>
             </div>
-            <p className="mb-4 font-medium">Greetings, thank you for visiting.</p>
+            <p className="mb-4 font-medium">Greetings, thank you for visiting. 👋</p>
             <p className="mb-4 font-medium">For my introduction, I have been a leading researcher and academic in the environmental health sciences. My career path has traveled through the private sector, academia, and the Federal government.</p>
           </div>
         </CardContent>
@@ -49,4 +81,3 @@ export default function Home() {
     </div>
   )
 }
-
