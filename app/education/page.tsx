@@ -1,9 +1,16 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FadeText } from '@/components/ui/fade-text'
 
 export default function Education() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-4xl font-bold mb-6">Education and Awards</h1>
+    <div className="space-y-6">
+      <FadeText 
+        text="Education and Awards"
+        className="text-4xl font-bold mb-6"
+        direction="up"
+      />
       
       <Card>
         <CardHeader>
@@ -51,4 +58,3 @@ export default function Education() {
     </div>
   )
 }
-
