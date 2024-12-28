@@ -116,7 +116,7 @@ export default function Career() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-8">
       <FadeText 
         text="Professional Career"
         className="text-4xl font-bold mb-6"

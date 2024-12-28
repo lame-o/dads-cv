@@ -138,7 +138,7 @@ export default function Publications() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="max-w-5xl mx-auto space-y-6">
       <FadeText 
         text="Publications"
         className="text-4xl font-bold mb-6"

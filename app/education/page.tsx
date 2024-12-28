@@ -5,7 +5,7 @@ import { FadeText } from '@/components/ui/fade-text'
 
 export default function Education() {
   return (
-    <div className="space-y-6">
+    <div className="max-w-5xl mx-auto space-y-6">
       <FadeText 
         text="Education and Awards"
         className="text-4xl font-bold mb-6"

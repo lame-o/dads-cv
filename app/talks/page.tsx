@@ -128,7 +128,7 @@ export default function Talks() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-6">
       <FadeText 
         text="Conference Talks"
         className="text-4xl font-bold mb-6"
