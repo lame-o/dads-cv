@@ -1,4 +1,7 @@
+"use client"
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { FadeText } from '@/components/ui/fade-text'
 
 export default function Talks() {
   const talks = [
@@ -126,9 +129,13 @@ export default function Talks() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
+      <FadeText 
+        text="Conference Talks"
+        className="text-4xl font-bold mb-6"
+        direction="up"
+      />
       <Card>
         <CardHeader>
-          <CardTitle>Conference Talks</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
@@ -148,4 +155,3 @@ export default function Talks() {
     </div>
   )
 }
-

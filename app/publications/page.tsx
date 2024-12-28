@@ -1,4 +1,7 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FadeText } from '@/components/ui/fade-text'
 
 export default function Publications() {
   const publications = [
@@ -135,10 +138,14 @@ export default function Publications() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      <FadeText 
+        text="Publications"
+        className="text-4xl font-bold mb-6"
+        direction="up"
+      />
       <Card>
         <CardHeader>
-          <CardTitle>Publications</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-6">
@@ -174,4 +181,3 @@ export default function Publications() {
     </div>
   )
 }
-

@@ -122,7 +122,7 @@ export default function Career() {
         className="text-4xl font-bold mb-6"
         direction="up"
       />
-      <div>
+      <div className="space-y-6">
         {careerEntries.map((entry, index) => (
           <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
             <CardHeader className="bg-gray-50 border-b">
