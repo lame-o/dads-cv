@@ -2,6 +2,7 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { FadeText } from '@/components/ui/fade-text'
+import { FadeListItem } from '@/components/ui/fade-list-item'
 
 export default function Talks() {
   const talks = [
@@ -135,19 +136,24 @@ export default function Talks() {
         direction="up"
       />
       <Card>
-        <CardHeader>
+        <CardHeader className="pb-0">
         </CardHeader>
-        <CardContent>
-          <div className="space-y-6">
+        <CardContent className="py-4">
+          <div className="space-y-4">
             {talks.map((talk, index) => (
-              <div key={index} className="border-b pb-4 last:border-b-0 font-medium">
-                <p className="font-bold text-indigo-600 text-lg">{talk.date}</p>
-                <p className="text-base">{talk.event}</p>
-                <p className="italic text-base">
-                  <span className="font-bold">{talk.type}: </span>
-                  {talk.title}
-                </p>
-              </div>
+              <FadeListItem key={index} delay={index * 0.1}>
+                <div className="pb-2 font-medium">
+                  <p className="font-bold text-indigo-600 text-lg">{talk.date}</p>
+                  <p className="text-base">{talk.event}</p>
+                  <p className="italic text-base">
+                    <span className="font-bold">{talk.type}: </span>
+                    {talk.title}
+                  </p>
+                  {index < talks.length - 1 && (
+                    <hr className="mt-4 border-gray-400" />
+                  )}
+                </div>
+              </FadeListItem>
             ))}
           </div>
         </CardContent>

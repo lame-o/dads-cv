@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeText } from '@/components/ui/fade-text'
+import { FadeListItem } from '@/components/ui/fade-list-item'
 
 export default function Publications() {
   const publications = [
@@ -145,25 +146,30 @@ export default function Publications() {
         direction="up"
       />
       <Card>
-        <CardHeader>
+        <CardHeader className="pb-0">
         </CardHeader>
-        <CardContent>
-          <ul className="space-y-6">
+        <CardContent className="py-4">
+          <div className="space-y-4">
             {publications.map((pub, index) => (
-              <li key={index} className="border-b pb-4 last:border-b-0 font-medium">
-                <p className="font-bold text-indigo-600 text-lg">{pub.authors} ({pub.year})</p>
-                <p className="italic text-base">{pub.title}</p>
-                {pub.journal && (
-                  <p className="text-base text-gray-700">
-                    {pub.journal}
-                    {pub.volume && `, ${pub.volume}`}
-                    {pub.pages && `: ${pub.pages}`}
-                  </p>
-                )}
-                {pub.note && <p className="text-base text-gray-700">{pub.note}</p>}
-              </li>
+              <FadeListItem key={index} delay={index * 0.1}>
+                <div className="pb-2 font-medium">
+                  <p className="font-bold text-indigo-600 text-lg">{pub.authors} ({pub.year})</p>
+                  <p className="italic text-base">{pub.title}</p>
+                  {pub.journal && (
+                    <p className="text-base text-gray-700">
+                      {pub.journal}
+                      {pub.volume && `, ${pub.volume}`}
+                      {pub.pages && `: ${pub.pages}`}
+                    </p>
+                  )}
+                  {pub.note && <p className="text-base text-gray-700">{pub.note}</p>}
+                  {index < publications.length - 1 && (
+                    <hr className="mt-4 border-gray-400" />
+                  )}
+                </div>
+              </FadeListItem>
             ))}
-          </ul>
+          </div>
         </CardContent>
       </Card>
       <Card>
@@ -171,10 +177,16 @@ export default function Publications() {
           <CardTitle>Reviewer for Scientific Journals</CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="list-disc list-inside">
-            <li className="font-medium">American Journal of Public Health</li>
-            <li className="font-medium">Ocean and Coastal Management</li>
-            <li className="font-medium">Water Research</li>
+          <ul className="list-disc list-inside space-y-2">
+            <FadeListItem delay={0.1}>
+              <li className="font-medium">American Journal of Public Health</li>
+            </FadeListItem>
+            <FadeListItem delay={0.2}>
+              <li className="font-medium">Ocean and Coastal Management</li>
+            </FadeListItem>
+            <FadeListItem delay={0.3}>
+              <li className="font-medium">Water Research</li>
+            </FadeListItem>
           </ul>
         </CardContent>
       </Card>
