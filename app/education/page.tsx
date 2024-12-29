@@ -29,32 +29,28 @@ export default function Education() {
                     "A multidisciplinary dissertation with an epidemiology study and economic impact analysis, titled:",
                     "Health and Economic Impacts of Coastal Water Pollution in North Orange County, California.",
                     "Three peer reviewed publications resulted from the research, and other investigations and publications in the field were inspired by the research. Several media articles were generated about my dissertation research, and I was interviewed on National Public Radio."
-                  ],
-                  delay: 0.2
+                  ]
                 },
                 {
                   title: "BA: U.C. San Diego",
                   subtitle: "Bachelor of Arts in Biology, 1988",
-                  description: ["Minors in Organic Chemistry and U.S. History"],
-                  delay: 0.4
+                  description: ["Minors in Organic Chemistry and U.S. History"]
                 }
               ].map((education, index) => (
-                <FadeListItem key={index} delay={education.delay}>
-                  <div>
-                    <h3 className="text-2xl font-bold">{education.title}</h3>
-                    <p className="font-medium">{education.subtitle}</p>
-                    {education.description.map((text, i) => (
-                      <p key={i} className="mt-2 font-medium">{text}</p>
-                    ))}
-                  </div>
-                </FadeListItem>
+                <div key={index}>
+                  <h3 className="text-2xl font-bold">{education.title}</h3>
+                  <p className="font-medium">{education.subtitle}</p>
+                  {education.description.map((text, i) => (
+                    <p key={i} className="mt-2 font-medium">{text}</p>
+                  ))}
+                </div>
               ))}
             </div>
           </CardContent>
         </Card>
       </BlurFade>
 
-      <BlurFade delay={0.5}>
+      <BlurFade delay={0.25}>
         <Card>
           <CardHeader>
             <CardTitle>Awards, Postdoctoral Position, and Fellowships</CardTitle>
@@ -64,35 +60,35 @@ export default function Education() {
               {[
                 {
                   text: "Trident University International (2017) - Teaching Excellence Award",
-                  delay: 0.1
-                },
-                {
-                  text: "U.C. Riverside, Department of Environmental Sciences (2009) - Postdoctoral Researcher for Dr. Linda Fernandez",
                   delay: 0.2
                 },
                 {
-                  text: "U.C. Irvine, School of Social Ecology (2001) - Research Fellowship",
-                  delay: 0.3
-                },
-                {
-                  text: "U.C. Irvine, School of Social Ecology (2000) - Regents Dissertation Fellowship",
+                  text: "U.C. Riverside, Department of Environmental Sciences (2009) - Postdoctoral Researcher for Dr. Linda Fernandez",
                   delay: 0.4
                 },
                 {
-                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1998) - Fellowship Recipient",
-                  delay: 0.5
-                },
-                {
-                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1997) - Fellowship Recipient",
+                  text: "U.C. Irvine, School of Social Ecology (2001) - Research Fellowship",
                   delay: 0.6
                 },
                 {
+                  text: "U.C. Irvine, School of Social Ecology (2000) - Regents Dissertation Fellowship",
+                  delay: 0.8
+                },
+                {
+                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1998) - Fellowship Recipient",
+                  delay: 1.0
+                },
+                {
+                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1997) - Fellowship Recipient",
+                  delay: 1.2
+                },
+                {
                   text: "Smithsonian Institution (1993) - Certificate for Exceptional Service",
-                  delay: 0.7
+                  delay: 1.4
                 },
                 {
                   text: "Smithsonian Institution (1992) - Certificate for Exceptional Service",
-                  delay: 0.8
+                  delay: 1.6
                 }
               ].map((award, index) => (
                 <FadeListItem key={index} delay={award.delay}>

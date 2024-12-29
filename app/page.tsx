@@ -17,13 +17,13 @@ export default function Home() {
       <BlurFade delay={0.25} inView>
         <Card className="overflow-hidden">
           <CardContent className="p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/3">
+            <div className="md:w-1/3 md:pl-12">
               <Image
                 src="/images/ryan-dwight.jpg"
                 alt="Ryan H. Dwight"
                 width={300}
                 height={300}
-                className="rounded-full shadow-lg"
+                className="rounded-full shadow-lg border-4 border-black"
               />
             </div>
             <div className="md:w-2/3">

@@ -22,7 +22,7 @@ export function FadeListItem({
         x: 0,
         transition: { 
           delay,
-          duration: 1.5,
+          duration: 1.2,
           ease: "easeOut"
         }
       }}
