@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { FadeText } from '@/components/ui/fade-text'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -22,7 +23,9 @@ const Navbar = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="text-2xl font-semibold text-gray-900">
-                Ryan H. Dwight, PhD
+                <FadeText text="Ryan H. Dwight, PhD"
+                direction="left" 
+                />
               </Link>
             </div>
           </div>
@@ -48,4 +51,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

@@ -3,10 +3,12 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from '@/components/ui/buttons'
 import { ArrowUpRight } from 'lucide-react'
-import {Linkedin} from 'lucide-react' 
-import {LifeBuoy} from 'lucide-react'
-import {Waves} from 'lucide-react'
+import { Linkedin } from 'lucide-react' 
+import { LifeBuoy } from 'lucide-react'
+import { Waves } from 'lucide-react'
 import { BlurFade } from '@/components/ui/blur-fade'
+import { FadeText } from '@/components/ui/fade-text'
+import { FadeListItem } from '@/components/ui/fade-list-item'
 
 export default function Home() {
   return (
@@ -71,14 +73,46 @@ export default function Home() {
             <CardTitle>Professional Summary</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="font-medium">I am an experienced manager, scientific researcher, analytical thinker, educator, and critical problem solver. I see the big-picture, while also being detail oriented to accomplish the mission.</li>
-              <li className="font-medium">I have supervised dozens of faculty and hundreds of students, developed research programs, conceived new approaches, conducted marketing, and produced and presented budgets and reports.</li>
-              <li className="font-medium">I have successfully coordinated complex multidisciplinary scientific investigations, and have been Principal Investigator or co-author on sixteen research articles that are published in peer-reviewed scientific journals. Several media articles were generated about my research, and I was interviewed on National Public Radio.</li>
-              <li className="font-medium">Twenty times I have presented my research at state and national scientific conferences.</li>
-              <li className="font-medium">I earned Postdoctoral and Fellowship positions, and was awarded for excellence in teaching and service at different institutions.</li>
-              <li className="font-medium">I am a clear communicator, and am comfortable working with high-ranking officials, analysts, economists, statisticians, scientists, executives, staff and students. I work well with everyone who wants to move the ball forward.</li>
-              <li className="font-medium">I am computer literate, proficient with MS Office and video conferencing. I am also proficient conducting quantitative statistical analyses with the applications Excel, R, SPSS and Intellectus.</li>
+            <ul className="space-y-4">
+              {[
+                {
+                  text: "I am an experienced manager, scientific researcher, analytical thinker, educator, and critical problem solver. I see the big-picture, while also being detail oriented to accomplish the mission.",
+                  delay: 0.2
+                },
+                {
+                  text: "I have supervised dozens of faculty and hundreds of students, developed research programs, conceived new approaches, conducted marketing, and produced and presented budgets and reports.",
+                  delay: 0.4
+                },
+                {
+                  text: "I have successfully coordinated complex multidisciplinary scientific investigations, and have been Principal Investigator or co-author on sixteen research articles that are published in peer-reviewed scientific journals. Several media articles were generated about my research, and I was interviewed on National Public Radio.",
+                  delay: 0.6
+                },
+                {
+                  text: "Twenty times I have presented my research at state and national scientific conferences.",
+                  delay: 0.8
+                },
+                {
+                  text: "I earned Postdoctoral and Fellowship positions, and was awarded for excellence in teaching and service at different institutions.",
+                  delay: 1.0
+                },
+                {
+                  text: "I am a clear communicator, and am comfortable working with high-ranking officials, analysts, economists, statisticians, scientists, executives, staff and students. I work well with everyone who wants to move the ball forward.",
+                  delay: 1.2
+                },
+                {
+                  text: "I am computer literate, proficient with MS Office and video conferencing. I am also proficient conducting quantitative statistical analyses with the applications Excel, R, SPSS and Intellectus.",
+                  delay: 1.4
+                }
+              ].map((item, i) => (
+                <li key={i}>
+                  <FadeListItem delay={item.delay} className="font-medium">
+                    <div className="flex gap-3">
+                      <span className="text-blue-600 flex-shrink-0">→</span>
+                      <span>{item.text}</span>
+                    </div>
+                  </FadeListItem>
+                </li>
+              ))}
             </ul>
           </CardContent>
         </Card>
