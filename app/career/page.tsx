@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeText } from '@/components/ui/fade-text'
+import { BlurFade } from '@/components/ui/blur-fade'
 import Image from 'next/image'
 
 export default function Career() {
@@ -125,58 +126,62 @@ export default function Career() {
       />
       <div className="space-y-6">
         {careerEntries.map((entry, index) => (
-          <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+          <BlurFade key={index} direction="right" inView inViewMargin="-100px">
+            <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <CardHeader className="bg-gray-50 border-b">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <CardTitle>{entry.title}</CardTitle>
+                    <CardDescription>{entry.company}</CardDescription>
+                  </div>
+                  <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
+                    <div className="w-full h-full bg-gray-200 rounded-full" />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="font-medium">
+                <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
+                <p className="text-base text-gray-700 mb-2">{entry.period}</p>
+                <ul className="list-disc list-inside space-y-1">
+                  {entry.responsibilities.map((responsibility, idx) => (
+                    <li key={idx} className="text-base">{responsibility}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </BlurFade>
+        ))}
+      </div>
+      <div className="mt-8">
+        <BlurFade direction="right" inView inViewMargin="-100px">
+          <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
             <CardHeader className="bg-gray-50 border-b">
               <div className="flex justify-between items-center">
-                <div>
-                  <CardTitle>{entry.title}</CardTitle>
-                  <CardDescription>{entry.company}</CardDescription>
-                </div>
+                <CardTitle>Courses Taught</CardTitle>
                 <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
                   <div className="w-full h-full bg-gray-200 rounded-full" />
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="font-medium">
-              <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
-              <p className="text-base text-gray-700 mb-2">{entry.period}</p>
-              <ul className="list-disc list-inside space-y-1">
-                {entry.responsibilities.map((responsibility, idx) => (
-                  <li key={idx} className="text-base">{responsibility}</li>
-                ))}
-              </ul>
+            <CardContent>
+              <h3 className="font-bold text-xl mb-2">Twenty-Five Courses taught in College of Health and Human Services, Trident University International</h3>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-bold text-lg">Undergraduate:</h3>
+                  <p className="text-base font-medium">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Master Program:</h3>
+                  <p className="text-base font-medium">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Doctoral Program:</h3>
+                  <p className="text-base font-medium">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
+                </div>
+              </div>
             </CardContent>
           </Card>
-        ))}
-      </div>
-      <div className="mt-8">
-        <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-          <CardHeader className="bg-gray-50 border-b">
-            <div className="flex justify-between items-center">
-              <CardTitle>Courses Taught</CardTitle>
-              <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
-                <div className="w-full h-full bg-gray-200 rounded-full" />
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <h3 className="font-bold text-xl mb-2">Twenty-Five Courses taught in College of Health and Human Services, Trident University International</h3>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-bold text-lg">Undergraduate:</h3>
-                <p className="text-base font-medium">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Master Program:</h3>
-                <p className="text-base font-medium">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Doctoral Program:</h3>
-                <p className="text-base font-medium">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        </BlurFade>
       </div>
     </div>
   )
