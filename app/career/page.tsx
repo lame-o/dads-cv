@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeText } from '@/components/ui/fade-text'
+import Image from 'next/image'
 
 export default function Career() {
   const careerEntries = [
@@ -126,8 +127,15 @@ export default function Career() {
         {careerEntries.map((entry, index) => (
           <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
             <CardHeader className="bg-gray-50 border-b">
-              <CardTitle>{entry.title}</CardTitle>
-              <CardDescription>{entry.company}</CardDescription>
+              <div className="flex justify-between items-center">
+                <div>
+                  <CardTitle>{entry.title}</CardTitle>
+                  <CardDescription>{entry.company}</CardDescription>
+                </div>
+                <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
+                  <div className="w-full h-full bg-gray-200 rounded-full" />
+                </div>
+              </div>
             </CardHeader>
             <CardContent className="font-medium">
               <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
@@ -142,10 +150,14 @@ export default function Career() {
         ))}
       </div>
       <div className="mt-8">
-        <h2 className="text-3xl font-bold mb-4">Courses Taught</h2>
         <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
           <CardHeader className="bg-gray-50 border-b">
-            <CardTitle>Courses Taught</CardTitle>
+            <div className="flex justify-between items-center">
+              <CardTitle>Courses Taught</CardTitle>
+              <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
+                <div className="w-full h-full bg-gray-200 rounded-full" />
+              </div>
+            </div>
           </CardHeader>
           <CardContent>
             <h3 className="font-bold text-xl mb-2">Twenty-Five Courses taught in College of Health and Human Services, Trident University International</h3>
