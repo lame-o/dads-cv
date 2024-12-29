@@ -68,7 +68,7 @@ export default function Career() {
         "Conducted research in public health, water quality and beach economics.",
         "Awarded for Excellence in Service to the University."
       ],
-      imageUrl: "/images/trident-2012.png"
+      imageUrl: "/images/trident.png"
     },
     {
       title: "Gerontological Services, Inc.",
@@ -111,7 +111,7 @@ export default function Career() {
       responsibilities: [
         "Presented lectures and reviews for six U.C. Irvine courses in earth sciences and public health; Developed and graded exams"
       ],
-      imageUrl: "/images/uc-irvine-2.png"
+      imageUrl: "/images/uc-irvine.png"
     },
     {
       title: "Smithsonian Institution, Office of Environmental and External Affairs",
@@ -136,19 +136,6 @@ export default function Career() {
         "As a Scripps Certified Research Diver, I went on four expeditions aboard research vessels in the Caribbean to collect samples and conduct research."
       ],
       imageUrl: "/images/scripps.png"
-    },
-    {
-      title: "Southern California Coastal Water Research Project",
-      company: "Costa Mesa, CA",
-      position: "Postdoctoral Research Fellow",
-      period: "2007 to 2008",
-      responsibilities: [
-        "Conducted research on coastal water quality and public health.",
-        "Coordinated and conducted scientific studies at beaches in Southern California.",
-        "Presented research findings at state and national conferences.",
-        "Published research findings in peer-reviewed scientific journals."
-      ],
-      imageUrl: "/images/sccwrp.png"
     }
   ];
 
@@ -169,7 +156,7 @@ export default function Career() {
                     <CardTitle>{entry.title}</CardTitle>
                     <CardDescription>{entry.company}</CardDescription>
                   </div>
-                  <div className="h-12 w-12 rounded-full bg-gray-100 border-2 border-gray-300 flex items-center justify-center flex-shrink-0 ml-4 overflow-hidden p-1">
+                  <div className="h-12 w-12 rounded-full bg-gray-100 border-2 border-gray-100 flex items-center justify-center flex-shrink-0 ml-4 overflow-hidden p-0.5">
                     {entry.imageUrl ? (
                       <Image
                         src={entry.imageUrl}
