@@ -22,7 +22,8 @@ export function FadeListItem({
         x: 0,
         transition: { 
           delay,
-          duration: 0.6 
+          duration: 1.5,
+          ease: "easeOut"
         }
       }}
       className={className}

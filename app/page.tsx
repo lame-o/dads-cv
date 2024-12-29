@@ -19,7 +19,7 @@ export default function Home() {
           <CardContent className="p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/3">
               <Image
-                src="/placeholder.svg"
+                src="/images/ryan-dwight.jpg"
                 alt="Ryan H. Dwight"
                 width={300}
                 height={300}
@@ -46,7 +46,7 @@ export default function Home() {
                   effect="expandIcon" 
                   icon={LifeBuoy} 
                   iconPlacement="right"
-                  className="rounded-full bg-orange-50 border-orange-200 text-orange-600 hover:bg-orange-100 hover:border-orange-300"
+                  className="rounded-full bg-blue-50 border-orange-200 text-orange-600 hover:bg-orange-100 hover:border-orange-300"
                 >
                   <Link href="https://www.graduateresearchcoach.com/">Graduate Research Coach</Link>
                 </Button>
@@ -56,7 +56,7 @@ export default function Home() {
                   effect="expandIcon" 
                   icon={Waves} 
                   iconPlacement="right"
-                  className="rounded-full bg-teal-50 border-teal-200 text-teal-600 hover:bg-teal-100 hover:border-teal-300"
+                  className="rounded-full bg-blue-50 border-teal-200 text-teal-600 hover:bg-teal-100 hover:border-teal-300"
                 >
                   <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
                 </Button>

@@ -2,6 +2,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeText } from '@/components/ui/fade-text'
+import { BlurFade } from '@/components/ui/blur-fade'
+import { FadeListItem } from '@/components/ui/fade-list-item'
 
 export default function Education() {
   return (
@@ -12,49 +14,95 @@ export default function Education() {
         direction="up"
       />
       
-      <Card>
-        <CardHeader>
-          <CardTitle>Education</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h3 className="text-2xl font-bold">PhD: U.C. Irvine</h3>
-            <p className="font-medium">Doctor of Philosophy in Environmental Health Science and Policy, 2001</p>
-            <p className="mt-2 font-medium">
-              A multidisciplinary dissertation with an epidemiology study and economic impact analysis, titled:
-              Health and Economic Impacts of Coastal Water Pollution in North Orange County, California.
-            </p>
-            <p className="mt-2 font-medium">
-              Three peer reviewed publications resulted from the research, and other investigations and
-              publications in the field were inspired by the research. Several media articles were generated
-              about my dissertation research, and I was interviewed on National Public Radio.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold">BA: U.C. San Diego</h3>
-            <p className="font-medium">Bachelor of Arts in Biology, 1988</p>
-            <p className="font-medium">Minors in Organic Chemistry and U.S. History</p>
-          </div>
-        </CardContent>
-      </Card>
+      <BlurFade>
+        <Card>
+          <CardHeader>
+            <CardTitle>Education</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              {[
+                {
+                  title: "PhD: U.C. Irvine",
+                  subtitle: "Doctor of Philosophy in Environmental Health Science and Policy, 2001",
+                  description: [
+                    "A multidisciplinary dissertation with an epidemiology study and economic impact analysis, titled:",
+                    "Health and Economic Impacts of Coastal Water Pollution in North Orange County, California.",
+                    "Three peer reviewed publications resulted from the research, and other investigations and publications in the field were inspired by the research. Several media articles were generated about my dissertation research, and I was interviewed on National Public Radio."
+                  ],
+                  delay: 0.2
+                },
+                {
+                  title: "BA: U.C. San Diego",
+                  subtitle: "Bachelor of Arts in Biology, 1988",
+                  description: ["Minors in Organic Chemistry and U.S. History"],
+                  delay: 0.4
+                }
+              ].map((education, index) => (
+                <FadeListItem key={index} delay={education.delay}>
+                  <div>
+                    <h3 className="text-2xl font-bold">{education.title}</h3>
+                    <p className="font-medium">{education.subtitle}</p>
+                    {education.description.map((text, i) => (
+                      <p key={i} className="mt-2 font-medium">{text}</p>
+                    ))}
+                  </div>
+                </FadeListItem>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </BlurFade>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Awards, Postdoctoral Position, and Fellowships</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="list-disc list-inside space-y-2">
-            <li className="font-medium">Trident University International (2017) - Teaching Excellence Award</li>
-            <li className="font-medium">U.C. Riverside, Department of Environmental Sciences (2009) - Postdoctoral Researcher for Dr. Linda Fernandez</li>
-            <li className="font-medium">U.C. Irvine, School of Social Ecology (2001) - Research Fellowship</li>
-            <li className="font-medium">U.C. Irvine, School of Social Ecology (2000) - Regents Dissertation Fellowship</li>
-            <li className="font-medium">U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1998) - Fellowship Recipient</li>
-            <li className="font-medium">U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1997) - Fellowship Recipient</li>
-            <li className="font-medium">Smithsonian Institution (1993) - Certificate for Exceptional Service</li>
-            <li className="font-medium">Smithsonian Institution (1992) - Certificate for Exceptional Service</li>
-          </ul>
-        </CardContent>
-      </Card>
+      <BlurFade delay={0.5}>
+        <Card>
+          <CardHeader>
+            <CardTitle>Awards, Postdoctoral Position, and Fellowships</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc list-inside space-y-2">
+              {[
+                {
+                  text: "Trident University International (2017) - Teaching Excellence Award",
+                  delay: 0.1
+                },
+                {
+                  text: "U.C. Riverside, Department of Environmental Sciences (2009) - Postdoctoral Researcher for Dr. Linda Fernandez",
+                  delay: 0.2
+                },
+                {
+                  text: "U.C. Irvine, School of Social Ecology (2001) - Research Fellowship",
+                  delay: 0.3
+                },
+                {
+                  text: "U.C. Irvine, School of Social Ecology (2000) - Regents Dissertation Fellowship",
+                  delay: 0.4
+                },
+                {
+                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1998) - Fellowship Recipient",
+                  delay: 0.5
+                },
+                {
+                  text: "U.C. Santa Barbara, UC Toxic Substances Research and Teaching Program (1997) - Fellowship Recipient",
+                  delay: 0.6
+                },
+                {
+                  text: "Smithsonian Institution (1993) - Certificate for Exceptional Service",
+                  delay: 0.7
+                },
+                {
+                  text: "Smithsonian Institution (1992) - Certificate for Exceptional Service",
+                  delay: 0.8
+                }
+              ].map((award, index) => (
+                <FadeListItem key={index} delay={award.delay}>
+                  <li className="font-medium">{award.text}</li>
+                </FadeListItem>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      </BlurFade>
     </div>
   )
 }
