@@ -40,7 +40,8 @@ export default function Career() {
         "Managed dozens of faculty, and oversaw and taught hundreds of graduate students in both programs.",
         "Developed several engaging graduate courses in public health sciences and epidemiology.",
         "Dissertation Committee Chair and Member for twenty-four PhD students covering a wide range of research topics in public health including COVID.",
-        "Served on University committees including Institutional Review Board, Doctoral Council and Library Committee."
+        "Served on University committees including Institutional Review Board, Doctoral Council and Library Committee.",
+        "Twenty-Five Courses taught in College of Health and Human Services, Trident University International:",
       ]
     },
     {
@@ -147,41 +148,30 @@ export default function Career() {
                     <li key={idx} className="text-base">{responsibility}</li>
                   ))}
                 </ul>
+                {entry.title === "Trident University International" && entry.period === "2018 to 2023" && (
+                  <Card className="mt-4 bg-gray-50/50">
+                    <CardContent className="pt-6">
+                      <div className="space-y-4">
+                        <div>
+                          <h3 className="font-bold text-lg">Undergraduate Courses:</h3>
+                          <p className="text-base">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Master Program Courses:</h3>
+                          <p className="text-base">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Doctoral Program Courses:</h3>
+                          <p className="text-base">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
               </CardContent>
             </Card>
           </BlurFade>
         ))}
-      </div>
-      <div className="mt-8">
-        <BlurFade direction="right" inView inViewMargin="-100px">
-          <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <CardHeader className="bg-gray-50 border-b">
-              <div className="flex justify-between items-center">
-                <CardTitle>Courses Taught</CardTitle>
-                <div className="h-12 w-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 ml-4">
-                  <div className="w-full h-full bg-gray-200 rounded-full" />
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <h3 className="font-bold text-xl mb-2">Twenty-Five Courses taught in College of Health and Human Services, Trident University International</h3>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-bold text-lg">Undergraduate:</h3>
-                  <p className="text-base font-medium">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg">Master Program:</h3>
-                  <p className="text-base font-medium">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg">Doctoral Program:</h3>
-                  <p className="text-base font-medium">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </BlurFade>
       </div>
     </div>
   )
