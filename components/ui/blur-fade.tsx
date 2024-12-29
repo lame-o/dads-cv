@@ -27,7 +27,7 @@ interface BlurFadeProps {
   blur?: string;
 }
 
-export default function BlurFade({
+export function BlurFade({
   children,
   className,
   variant,
