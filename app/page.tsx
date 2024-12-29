@@ -61,7 +61,7 @@ export default function Home() {
                   <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
                 </Button>
               </div>
-              <TypingAnimation className="mb-2 text-md" delay={100}>Thank you for visiting!</TypingAnimation>
+              <TypingAnimation className="mb-2 text-2xl" delay={200} duration={100}>Thank you for visiting!</TypingAnimation>
               <p className="mb-4 font-medium">For my introduction, I have been a leading researcher and academic in the environmental health sciences. My career path has traveled through the private sector, academia, and the Federal government.</p>
             </div>
           </CardContent>
