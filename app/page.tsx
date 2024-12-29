@@ -9,6 +9,7 @@ import { Waves } from 'lucide-react'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { FadeText } from '@/components/ui/fade-text'
 import { FadeListItem } from '@/components/ui/fade-list-item'
+import TypingAnimation from "@/components/ui/typing-animation"
 
 export default function Home() {
   return (
@@ -60,7 +61,7 @@ export default function Home() {
                   <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
                 </Button>
               </div>
-              <p className="mb-4 font-medium">Greetings, thank you for visiting. 👋</p>
+              <TypingAnimation className="mb-2 text-md" delay={100}>Thank you for visiting!</TypingAnimation>
               <p className="mb-4 font-medium">For my introduction, I have been a leading researcher and academic in the environmental health sciences. My career path has traveled through the private sector, academia, and the Federal government.</p>
             </div>
           </CardContent>
