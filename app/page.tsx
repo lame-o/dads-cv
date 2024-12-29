@@ -76,31 +76,31 @@ export default function Home() {
             <ul className="space-y-4">
               {[
                 {
-                  text: "I am an experienced manager, scientific researcher, analytical thinker, educator, and critical problem solver. I see the big-picture, while also being detail oriented to accomplish the mission.",
+                  text: <>I am an <span className="text-blue-600 font-bold">experienced manager</span>, scientific researcher, analytical thinker, educator, and critical problem solver. I see the big-picture, while also being detail oriented to accomplish the mission.</>,
                   delay: 0.2
                 },
                 {
-                  text: "I have supervised dozens of faculty and hundreds of students, developed research programs, conceived new approaches, conducted marketing, and produced and presented budgets and reports.",
+                  text: <>I have supervised <span className="text-blue-600 font-bold">dozens of faculty</span> and <span className="text-blue-600 font-bold">hundreds of students</span>, developed research programs, conceived new approaches, conducted marketing, and produced and presented budgets and reports.</>,
                   delay: 0.4
                 },
                 {
-                  text: "I have successfully coordinated complex multidisciplinary scientific investigations, and have been Principal Investigator or co-author on sixteen research articles that are published in peer-reviewed scientific journals. Several media articles were generated about my research, and I was interviewed on National Public Radio.",
+                  text: <>I have successfully coordinated complex multidisciplinary scientific investigations, and have been <span className="text-blue-600 font-bold">Principal Investigator</span> or co-author on <span className="font-bold">sixteen research articles</span> that are published in peer-reviewed scientific journals. Several media articles were generated about my research, and I was interviewed on <span className="text-blue-600 font-bold">National Public Radio</span>.</>,
                   delay: 0.6
                 },
                 {
-                  text: "Twenty times I have presented my research at state and national scientific conferences.",
+                  text: <><span className="text-blue-600 font-bold">Twenty times</span> I have presented my research at state and national scientific conferences.</>,
                   delay: 0.8
                 },
                 {
-                  text: "I earned Postdoctoral and Fellowship positions, and was awarded for excellence in teaching and service at different institutions.",
+                  text: <>I earned <span className="text-blue-600 font-bold">Postdoctoral</span> and <span className="text-blue-600 font-bold">Fellowship</span> positions, and was awarded for excellence in teaching and service at different institutions.</>,
                   delay: 1.0
                 },
                 {
-                  text: "I am a clear communicator, and am comfortable working with high-ranking officials, analysts, economists, statisticians, scientists, executives, staff and students. I work well with everyone who wants to move the ball forward.",
+                  text: <>I am a <span className="text-blue-600 font-bold">clear communicator</span>, and am comfortable working with high-ranking officials, analysts, economists, statisticians, scientists, executives, staff and students. I work well with everyone who wants to move the ball forward.</>,
                   delay: 1.2
                 },
                 {
-                  text: "I am computer literate, proficient with MS Office and video conferencing. I am also proficient conducting quantitative statistical analyses with the applications Excel, R, SPSS and Intellectus.",
+                  text: <>I am computer literate, proficient with <span className="text-blue-600 font-bold">MS Office</span> and video conferencing. I am also proficient conducting quantitative statistical analyses with the applications <span className="text-blue-600 font-bold">Excel</span>, <span className="text-blue-600 font-bold">R</span>, <span className="text-blue-600 font-bold">SPSS</span> and <span className="text-blue-600 font-bold">Intellectus</span>.</>,
                   delay: 1.4
                 }
               ].map((item, i) => (
