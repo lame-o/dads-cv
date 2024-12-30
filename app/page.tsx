@@ -70,13 +70,21 @@ export default function Home() {
       <BlurFade delay={0.5} inView>
         <Card>
           <CardHeader>
-            <CardTitle>Professional Summary</CardTitle>
+            <CardTitle className="text-2xl">Professional Summary</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
               {[
                 {
-                  text: <>I am an <span className="text-blue-600 font-bold">experienced manager</span>, scientific researcher, analytical thinker, educator, and critical problem solver. I see the big-picture, while also being detail oriented to accomplish the mission.</>,
+                  text: <>I am a <span className="text-blue-600 font-bold">leading researcher</span> and academic in the wide field of environmental health sciences.</>,
+                  delay: 0.1
+                },
+                {
+                  text: <>My career path has traveled through the <span className="text-blue-600 font-bold">private sector</span>, <span className="text-blue-600 font-bold">academia</span>, and the <span className="text-blue-600 font-bold">federal government</span>.</>,
+                  delay: 0.15
+                },
+                {
+                  text: <>I am an <span className="text-blue-600 font-bold">experienced manager, scientific researcher, analytical thinker, educator, and critical problem solver.</span> I see the big-picture, while also being detail oriented to accomplish the mission.</>,
                   delay: 0.2
                 },
                 {
