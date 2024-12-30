@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Ryan H. Dwight, PhD',
-  description: 'Personal website of Ryan H. Dwight, PhD',
+  description: 'Personal website of Ryan H. Dwight, PhD, Ryan Dwight, Dr. Dwight, Graduarte Research Coach, Coastal Water Research Group'
 }
 
 export default function RootLayout({

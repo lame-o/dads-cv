@@ -16,20 +16,20 @@ export default function Home() {
     <div className="space-y-8">
       <BlurFade delay={0.25} inView>
         <Card className="overflow-hidden">
-          <CardContent className="p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/3 md:pl-12">
+          <CardContent className="p-6 sm:p-8 flex flex-col md:flex-row items-center justify-center text-center">
+            <div className="md:w-1/3 md:pl-0">
               <Image
                 src="/images/ryan-dwight.jpg"
                 alt="Ryan H. Dwight"
                 width={300}
                 height={300}
-                className="rounded-full shadow-lg border-4 border-black"
+                className="rounded-full shadow-lg border-4 border-black mx-auto"
               />
             </div>
-            <div className="md:w-2/3">
+            <div className="md:w-2/3 flex flex-col items-center">
               <h1 className="text-4xl font-bold mb-4">Ryan H. Dwight, PhD</h1>
               <p className="mb-2 font-medium">Huntington Beach, California 🌴</p>
-              <div className="mb-4 flex flex-wrap gap-3">
+              <div className="mb-4 flex flex-wrap gap-3 justify-center">
                 <Button 
                   asChild 
                   variant="outline" 
@@ -61,8 +61,7 @@ export default function Home() {
                   <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
                 </Button>
               </div>
-              <TypingAnimation className="mb-2 text-2xl" delay={200} duration={100}>Thank you for visiting!</TypingAnimation>
-              <p className="mb-4 font-medium">For my introduction, I have been a leading researcher and academic in the environmental health sciences. My career path has traveled through the private sector, academia, and the Federal government.</p>
+              <TypingAnimation className="mb-4 text-3xl" delay={100} duration={200}>Welcome!</TypingAnimation>
             </div>
           </CardContent>
         </Card>
