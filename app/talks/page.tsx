@@ -51,7 +51,7 @@ export default function Talks() {
     {
       date: "September 8, 2010",
       event: "California and the World Ocean Conference, San Francisco",
-      title: "Impacts of Climate Change and Urbanization on Coastal Water Quality in Southern CA",
+      title: "Impacts of Climate Change and Urbanization on Coastal Water Quality and Public Health in Southern CA",
       type: "Poster"
     },
     {
@@ -147,7 +147,121 @@ export default function Talks() {
                   <p className="text-base">{talk.event}</p>
                   <p className="italic text-base">
                     <span className="font-bold">{talk.type}: </span>
-                    {talk.title}
+                    {talk.title === "The U.S. EPA Proposed Recreational Water Quality Criteria and the Potential Public Health Burden for Southern California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2012_BWQWG_EPA_Criteria_SoCal_Health_Burden.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Amounts and Distribution of Recreational Beach Expenditures in Southern California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_Amounts_DistributionBeachExpenditures.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Impacts of Climate Change and Urbanization on Coastal Water Quality in Southern CA" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_InfluenceClimateChange_Urbanization.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Blame the Moon: A Critical Analysis of \"Environmental Sources\" of Enterococci into Southern California Coastal Waters" ? (
+                      <a 
+                        href={talk.type === "Presented" 
+                          ? "https://coastalwaterresearch.com/documents/Talk_2011_H2O_Blame_the_Moon.pdf"
+                          : "https://coastalwaterresearch.com/documents/Poster_2011_EPA_Blame_the_Moon.pdf"}
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Health Risks Associated with Bathing in Southern California Coastal Waters" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Poster_2011_EPA_Health_Risk.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Health Risk of Bathing in Southern California Coastal Waters" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2009_EPA_HealthRisk.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "The Human Tide: Beach Attendance and Bathing Rates for Southern California" ? (
+                      <a 
+                        href={talk.date.includes("2009") 
+                          ? "https://coastalwaterresearch.com/documents/Talk_2009_EPA_Attendance.pdf"
+                          : talk.date.includes("2008")
+                            ? "https://coastalwaterresearch.com/documents/Talk_2008_BWQWG_Beach_Attendance.pdf"
+                            : "https://coastalwaterresearch.com/documents/Talk_2007_H2O_Beach_Attendance.pdf"}
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "What to do with the Enterococci standard?" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2006_World_Ocean_Conf_What_to_do_with_Enterococci.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "The Economic Burden from Illnesses Associated with Recreational Coastal Waters" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2005_H2O_Econ_Burden_of_Illness.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Risk and Severity of Recreational Water Associated Illnesses" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2005_OceanEmergencies_Risk_and_Severity.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "El Nino's Effect on Urban Runoff and Coastal Water Quality in Orange County, CA" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2001_AAAS_Climate_Water_Quality.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title === "Estimated health costs for illnesses associated with recreational contact with marine waters contaminated by urban runoff" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Talk_2001_Health_Costs_of_Illnesses.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {talk.title}
+                      </a>
+                    ) : talk.title}
                   </p>
                   {index < talks.length - 1 && (
                     <hr className="mt-4 border-gray-400" />
