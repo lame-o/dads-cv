@@ -27,16 +27,16 @@ export default function Home() {
               />
             </div>
             <div className="md:w-2/3 flex flex-col items-center">
-              <h1 className="text-4xl font-bold mb-4">Ryan H. Dwight, PhD</h1>
-              <p className="mb-2 font-medium">Huntington Beach, California 🌴</p>
-              <div className="mb-4 flex flex-wrap gap-3 justify-center">
+              <h1 className="text-6xl font-bold mb-6">Ryan H. Dwight, PhD</h1>
+              <p className="mb-8 text-2xl font-medium">Huntington Beach, California 🌴</p>
+              <div className="mb-8 flex flex-wrap gap-6 justify-center">
                 <Button 
                   asChild 
                   variant="outline" 
                   effect="expandIcon" 
                   icon={Linkedin} 
                   iconPlacement="right"
-                  className="rounded-full bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 hover:border-blue-300"
+                  className="rounded-full bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 hover:border-blue-300 text-lg py-6 px-8"
                 >
                   <Link href="https://linkedin.com/in/ryan-dwight-04155429">LinkedIn</Link>
                 </Button>
@@ -46,7 +46,7 @@ export default function Home() {
                   effect="expandIcon" 
                   icon={LifeBuoy} 
                   iconPlacement="right"
-                  className="rounded-full bg-blue-50 border-orange-200 text-orange-600 hover:bg-orange-100 hover:border-orange-300"
+                  className="rounded-full bg-blue-50 border-orange-200 text-orange-600 hover:bg-orange-100 hover:border-orange-300 text-lg py-6 px-8"
                 >
                   <Link href="https://www.graduateresearchcoach.com/">Graduate Research Coach</Link>
                 </Button>
@@ -56,12 +56,12 @@ export default function Home() {
                   effect="expandIcon" 
                   icon={Waves} 
                   iconPlacement="right"
-                  className="rounded-full bg-blue-50 border-teal-200 text-teal-600 hover:bg-teal-100 hover:border-teal-300"
+                  className="rounded-full bg-blue-50 border-teal-200 text-teal-600 hover:bg-teal-100 hover:border-teal-300 text-lg py-6 px-8"
                 >
                   <Link href="https://coastalwaterresearch.com/">Coastal Water Research Group</Link>
                 </Button>
               </div>
-              <TypingAnimation className="mb-4 text-3xl" delay={100} duration={200}>Welcome!</TypingAnimation>
+              <TypingAnimation className="mb-4 text-5xl" delay={100} duration={200}>Welcome!</TypingAnimation>
             </div>
           </CardContent>
         </Card>
