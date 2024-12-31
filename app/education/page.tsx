@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeText } from '@/components/ui/fade-text'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { FadeListItem } from '@/components/ui/fade-list-item'
+import Image from 'next/image'
 
 export default function Education() {
   return (
@@ -47,6 +48,18 @@ export default function Education() {
             ))}
           </CardContent>
         </Card>
+      </BlurFade>
+
+      <BlurFade delay={0.15}>
+        <div className="max-w-3xl mx-auto w-full aspect-[16/9] relative">
+          <Image
+            src="/images/PhD-Graduate-Research-Coach.png"
+            alt="PhD Graduate Research Coach"
+            fill
+            className="object-cover rounded-lg"
+            priority
+          />
+        </div>
       </BlurFade>
 
       <BlurFade delay={0.25}>
