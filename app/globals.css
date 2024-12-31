@@ -26,13 +26,27 @@
   .nav-tab {
     position: relative;
     padding: 0.5rem 1.5rem;
-    margin-right: -15px;
-    background: #f5e6d3;
+    margin-right: -30px;
+    background: linear-gradient(to bottom, #d4d4d4 0%, #d4d4d4 100%);
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
     border-radius: 8px 8px 0 0;
     transition: all 0.2s ease;
     min-width: 120px;
     text-align: center;
+  }
+
+  .nav-tab::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #f5e6d3;
+    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .nav-tab span {
+    position: relative;
+    z-index: 1;
   }
 
   .nav-tab:nth-child(6) { z-index: 1; }
@@ -43,8 +57,11 @@
   .nav-tab:nth-child(1) { z-index: 6; }
 
   .nav-tab.active {
-    background: #f3f4f6;
     z-index: 20;
+  }
+
+  .nav-tab.active::before {
+    background: #f3f4f6;
   }
 
   .nav-tab:hover {

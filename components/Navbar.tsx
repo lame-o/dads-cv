@@ -43,7 +43,7 @@ const Navbar = () => {
                     : ''
                 } inline-flex items-center justify-center min-w-[120px] text-sm font-medium`}
               >
-                {item.name}
+                <span>{item.name}</span>
               </Link>
             ))}
           </div>
