@@ -153,7 +153,27 @@ export default function Career() {
               <CardHeader className="bg-gray-50 border-b">
                 <div className="flex justify-between items-center">
                   <div>
-                    <CardTitle>{entry.title}</CardTitle>
+                    <CardTitle className="text-2xl">
+                      {entry.title === "Graduate Research Coach" ? (
+                        <a 
+                          href="https://www.graduateresearchcoach.com/" 
+                          className="hover:underline underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {entry.title}
+                        </a>
+                      ) : entry.title === "Coastal Water Research Group" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/" 
+                          className="hover:underline underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {entry.title}
+                        </a>
+                      ) : entry.title}
+                    </CardTitle>
                     <CardDescription>{entry.company}</CardDescription>
                   </div>
                   <div className="h-12 w-12 rounded-full bg-gray-100 border-2 border-gray-100 flex items-center justify-center flex-shrink-0 ml-4 overflow-hidden p-0.5">
