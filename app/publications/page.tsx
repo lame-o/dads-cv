@@ -154,7 +154,153 @@ export default function Publications() {
               <FadeListItem key={index} delay={index * 0.1}>
                 <div className="pb-2 font-medium">
                   <p className="font-bold text-indigo-600 text-lg">{pub.authors} ({pub.year})</p>
-                  <p className="italic text-base">{pub.title}</p>
+                  <p className="italic text-base">
+                    {pub.title === "Impacts of variable precipitation on coastal water quality in southern California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2011_Climate_Water_Quality.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Amounts and distribution of recreational beach expenditures in southern California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2012_Beach_Economics.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Response to Editorial on \"Risk of recreational water use in southern California\"" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2009_Response_to_Rebuttal_Editorial.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Health risk of bathing in southern California coastal waters" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2008_Health_Risk_Bathing_in_SoCal.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Beach attendance and bathing rates for southern California beaches" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2007_Beach_Attendance.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Comment on \"Coastal water quality impact of stormwater runoff from an urbanized watershed in southern California\"" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2006_Comment_on_Anh_Paper.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Estimating the economic burden from illnesses associated with recreational coastal water pollution – a case study in Orange County, California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2005_Est_Economic_Burden.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Health effects associated with recreational coastal water use in urban vs. rural California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2004_Health_Effects_Assoc_w_CW.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Association of urban runoff with coastal water quality in Orange County, California" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2002_Assoc_Urban_Runoff_w_CWQ.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Health and Economic Impacts of Coastal Water Pollution in North Orange County, California: A Multi-disciplinary Analysis" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_2001_Dissertation.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Salinamides A & B: Anti-inflammatory depsipeptides from marine Streptomycete" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1994_Salinamides_A_B.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Rare Phenazine L-Quinovose esters from a marine Actinomycete" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1992_Rare_Phenazine_L-Quinovose_esters.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Structure and synthesis of a new Butanolide from a marine Actinomycete" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1991_Structure_and_Synthesis_of_new_Butanolide.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Structure determination of Maduralied: A new 24-member ring macrolide glycoside produced by a marine bacterium (Actinomycetales)" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1991_Structureal_determination_of_Maduralide.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Biological diversity and Neptune's realm" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1992_Biodiv_in_Neptune_Realm.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title === "Distribution of Actinomycetes in near-shore tropical marine sediments" ? (
+                      <a 
+                        href="https://coastalwaterresearch.com/documents/Paper_1991_Distribution_of_Actino.pdf"
+                        className="underline hover:text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : pub.title}
+                  </p>
                   {pub.journal && (
                     <p className="text-base text-gray-700">
                       {pub.journal}
