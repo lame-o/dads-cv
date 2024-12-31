@@ -70,7 +70,7 @@ export default function Home() {
       <BlurFade delay={0.5} inView>
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Professional Summary</CardTitle>
+            <CardTitle className="text-3xl">Professional Summary</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">

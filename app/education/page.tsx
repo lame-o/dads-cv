@@ -17,35 +17,34 @@ export default function Education() {
       <BlurFade>
         <Card>
           <CardHeader>
-            <CardTitle>Education</CardTitle>
+            <CardTitle className="text-3xl text-blue-600">Education</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div>
-              {[
-                {
-                  title: "PhD: U.C. Irvine",
-                  subtitle: "Doctor of Philosophy in Environmental Health Science and Policy, 2001",
-                  description: [
-                    "A multidisciplinary dissertation with an epidemiology study and economic impact analysis, titled:",
-                    "Health and Economic Impacts of Coastal Water Pollution in North Orange County, California.",
-                    "Three peer reviewed publications resulted from the research, and other investigations and publications in the field were inspired by the research. Several media articles were generated about my dissertation research, and I was interviewed on National Public Radio."
-                  ]
-                },
-                {
-                  title: "BA: U.C. San Diego",
-                  subtitle: "Bachelor of Arts in Biology, 1988",
-                  description: ["Minors in Organic Chemistry and U.S. History"]
-                }
-              ].map((education, index) => (
-                <div key={index}>
-                  <h3 className="text-2xl font-bold">{education.title}</h3>
-                  <p className="font-medium">{education.subtitle}</p>
-                  {education.description.map((text, i) => (
-                    <p key={i} className="mt-2 font-medium">{text}</p>
-                  ))}
-                </div>
-              ))}
-            </div>
+            {[
+              {
+                title: "PhD: U.C. Irvine",
+                subtitle: "Doctor of Philosophy in Environmental Health Science and Policy, 2001",
+                description: [
+                  "A multidisciplinary dissertation with an epidemiology study and economic impact analysis, titled:",
+                  "Health and Economic Impacts of Coastal Water Pollution in North Orange County, California.",
+                  "Three peer reviewed publications resulted from the research, and other investigations and publications in the field were inspired by the research. Several media articles were generated about my dissertation research, and I was interviewed on National Public Radio."
+                ]
+              },
+              {
+                title: "BA: U.C. San Diego",
+                subtitle: "Bachelor of Arts in Biology, 1988",
+                description: ["Minors in Organic Chemistry and U.S. History"]
+              }
+            ].map((education, index) => (
+              <div key={index}>
+                <h3 className="text-2xl font-bold">{education.title}</h3>
+                <p className="font-medium">{education.subtitle}</p>
+                {education.description.map((text, i) => (
+                  <p key={i} className="mt-2 font-medium">{text}</p>
+                ))}
+                {index < 1 && <hr className="border-t-2 border-gray-300 my-6" />}
+              </div>
+            ))}
           </CardContent>
         </Card>
       </BlurFade>
@@ -53,7 +52,7 @@ export default function Education() {
       <BlurFade delay={0.25}>
         <Card>
           <CardHeader>
-            <CardTitle>Awards, Postdoctoral Position, and Fellowships</CardTitle>
+            <CardTitle className="text-3xl text-blue-600">Awards, Postdoctoral Position, and Fellowships</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-2">
