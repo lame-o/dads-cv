@@ -33,19 +33,25 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex items-end tab-container">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`nav-tab ${
-                  pathname === item.href
-                    ? 'active'
-                    : ''
-                } inline-flex items-center justify-center min-w-[120px] text-sm font-medium`}
-              >
-                <span>{item.name}</span>
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = pathname === item.href;
+              const activeIndex = navItems.findIndex(nav => nav.href === pathname);
+              let moveDirection = '';
+              
+              if (!isActive && activeIndex !== -1) {
+                moveDirection = index < activeIndex ? 'move-left' : 'move-right';
+              }
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`nav-tab ${isActive ? 'active' : ''} ${moveDirection} inline-flex items-center justify-center min-w-[120px] text-sm font-medium`}
+                >
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
           </div>
           <div className="sm:hidden flex items-center">
             <button
