@@ -2,7 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { DotPattern } from '../components/ui/dot-pattern'
+import { GridPattern } from '../components/ui/grid-pattern'
 import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,16 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "min-h-screen flex flex-col relative bg-gray-50/50")}>
+      <body className={cn(inter.className, "min-h-screen flex flex-col relative bg-[#f5e6d3]")}>
         <div className="absolute inset-0 overflow-hidden">
-          <DotPattern
+          <GridPattern
             width={30}
             height={30}
-            cx={10}
-            cy={10}
-            cr={1.5}
             className={cn(
-              "absolute inset-0 opacity-100",
+              "absolute inset-0 opacity-100 fill-[#f5e6d3] stroke-gray-400/50",
               "[mask-image:linear-gradient(to_right,transparent,white,white,transparent)]"
             )}
           />
