@@ -32,16 +32,16 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <div className="hidden sm:ml-6 sm:flex items-end tab-container">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${
+                className={`nav-tab ${
                   pathname === item.href
-                    ? 'border-indigo-500 text-gray-900'
-                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                    ? 'active'
+                    : ''
+                } inline-flex items-center justify-center min-w-[120px] text-sm font-medium`}
               >
                 {item.name}
               </Link>
