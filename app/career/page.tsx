@@ -87,8 +87,8 @@ export default function Career() {
       position: "Office Manager, Legal Assistant; Accounting",
       period: "2002 to 2012",
       responsibilities: [
-        "Managed an intellectual property law firm; Oversaw business, marketing and financial accounts",
-        "Managed the docket; Drafted and prepared court filings; Conducted legal research"
+        "Managed an intellectual property law firm; Oversaw business, marketing and financial accounts.",
+        "Managed the docket; Drafted and prepared court filings; Conducted legal research."
       ],
       imageUrl: "/images/dwight-law.png"
     },
@@ -98,8 +98,8 @@ export default function Career() {
       position: "Assistant Project Scientist",
       period: "2003 to 2005",
       responsibilities: [
-        "Coordinated the leading researchers and stakeholders to examine perchlorate contamination in national drinking waters",
-        "Prepared the final report for the California Department of Health Services"
+        "Coordinated the leading researchers and stakeholders to examine perchlorate contamination in national drinking waters.",
+        "Prepared the final report for the California Department of Health Services."
       ],
       imageUrl: "/images/uc-irvine.png"
     },
@@ -109,7 +109,7 @@ export default function Career() {
       position: "Teaching Assistant",
       period: "1994 to 1997",
       responsibilities: [
-        "Presented lectures and reviews for six U.C. Irvine courses in earth sciences and public health; Developed and graded exams"
+        "Presented lectures and reviews for six U.C. Irvine courses in earth sciences and public health; Developed and graded exams."
       ],
       imageUrl: "/images/uc-irvine.png"
     },
@@ -119,9 +119,9 @@ export default function Career() {
       position: "Program Assistant (GS-11) for Dr. Thomas E. Lovejoy",
       period: "1991 to 1994",
       responsibilities: [
-        "Science advisor to the National Museum of Natural History for their Oceans Exhibition and book",
-        "Coordinated workshops of leading researchers to initiate a Global Biodiversity Inventory",
-        "Consulted with White House Scientific Advisory Panel to prepare research for first Earth Summit"
+        "Science advisor to the National Museum of Natural History for their Oceans Exhibition and book.",
+        "Coordinated workshops of leading researchers to initiate a Global Biodiversity Inventory.",
+        "Consulted with White House Scientific Advisory Panel to prepare research for first Earth Summit."
       ],
       imageUrl: "/images/smithsonian.png"
     },
@@ -194,9 +194,11 @@ export default function Career() {
               <CardContent className="font-medium">
                 <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
                 <p className="text-base text-gray-700 mb-2">{entry.period}</p>
-                <ul className="list-disc list-inside space-y-1">
-                  {entry.responsibilities.map((responsibility, idx) => (
-                    <li key={idx} className="text-base">{responsibility}</li>
+                <ul className="list-disc pl-5 space-y-2">
+                  {entry.responsibilities.map((responsibility, index) => (
+                    <li key={index} className="pl-2">
+                      <span className="block pl-2 -indent-2">{responsibility}</span>
+                    </li>
                   ))}
                 </ul>
                 {entry.title === "Trident University International" && entry.period === "2018 to 2023" && (
@@ -204,16 +206,16 @@ export default function Career() {
                     <CardContent className="pt-6">
                       <div className="space-y-4">
                         <div>
-                          <h3 className="font-bold text-lg">Undergraduate Courses:</h3>
-                          <p className="text-base">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
+                          <h3 className="font-bold text-md">Undergraduate Courses:</h3>
+                          <p className="text-sm">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
                         </div>
                         <div>
-                          <h3 className="font-bold text-lg">Master Program Courses:</h3>
-                          <p className="text-base">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
+                          <h3 className="font-bold text-md">Master Program Courses:</h3>
+                          <p className="text-sm">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
                         </div>
                         <div>
-                          <h3 className="font-bold text-lg">Doctoral Program Courses:</h3>
-                          <p className="text-base">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
+                          <h3 className="font-bold text-md">Doctoral Program Courses:</h3>
+                          <p className="text-sm">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
                         </div>
                       </div>
                     </CardContent>
