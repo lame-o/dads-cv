@@ -141,89 +141,106 @@ export default function Career() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">
-      <FadeText 
-        text="Professional Career"
-        className="text-4xl font-bold mb-6"
-        direction="up"
-      />
       <div className="space-y-6">
         {careerEntries.map((entry, index) => (
-          <BlurFade key={index} direction="right" inView inViewMargin="-100px">
-            <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <CardHeader className="bg-gray-50 border-b">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <CardTitle className="text-2xl">
-                      {entry.title === "Graduate Research Coach" ? (
-                        <a 
-                          href="https://www.graduateresearchcoach.com/" 
-                          className="hover:underline underline hover:text-blue-600"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {entry.title}
-                        </a>
-                      ) : entry.title === "Coastal Water Research Group" ? (
-                        <a 
-                          href="https://coastalwaterresearch.com/" 
-                          className="hover:underline underline hover:text-blue-600"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {entry.title}
-                        </a>
-                      ) : entry.title}
-                    </CardTitle>
-                    <CardDescription>{entry.company}</CardDescription>
-                  </div>
-                  <div className="h-12 w-12 rounded-full bg-gray-100 border-2 border-gray-100 flex items-center justify-center flex-shrink-0 ml-4 overflow-hidden p-0.5">
-                    {entry.imageUrl ? (
-                      <Image
-                        src={entry.imageUrl}
-                        alt={`${entry.title} logo`}
-                        width={48}
-                        height={48}
-                        className="object-contain w-full h-full"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gray-200 rounded-full" />
-                    )}
-                  </div>
+          <div key={`${entry.company}-${entry.title}`} className={`relative ${index === 0 ? 'mt-16' : ''}`}>
+            {index === 0 && (
+              <div className="-translate-x-8 translate-y-2.5 absolute z-10 bottom-full left-8 bg-white px-16 py-4" 
+                style={{ 
+                  width: 'fit-content',
+                  clipPath: 'polygon(40px 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%)'
+                }}>
+                <div className="absolute inset-[11px] bg-[#d4d4d4]"
+                  style={{
+                    clipPath: 'polygon(36px 0%, calc(100% - 36px) 0%, 98.5% 100%, 1.5% 100%)'
+                  }}>
                 </div>
-              </CardHeader>
-              <CardContent className="font-medium">
-                <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
-                <p className="text-base text-gray-700 mb-2">{entry.period}</p>
-                <ul className="list-disc pl-5 space-y-2">
-                  {entry.responsibilities.map((responsibility, index) => (
-                    <li key={index} className="pl-2">
-                      <span className="block pl-2 -indent-2">{responsibility}</span>
-                    </li>
-                  ))}
-                </ul>
-                {entry.title === "Trident University International" && entry.period === "2018 to 2023" && (
-                  <Card className="mt-4 bg-gray-50/50">
-                    <CardContent className="pt-6">
-                      <div className="space-y-4">
-                        <div>
-                          <h3 className="font-bold text-md">Undergraduate Courses:</h3>
-                          <p className="text-sm">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
+                <div className="relative">
+                  <FadeText 
+                    text="Professional Career"
+                    className="text-4xl font-bold text-black tracking-tight"
+                    direction="left"
+                  />
+                </div>
+              </div>
+            )}
+            <BlurFade direction="right" inView inViewMargin="-100px">
+              <Card className={`overflow-hidden transition-all duration-300 hover:shadow-lg ${index === 0 ? 'bg-white' : ''}`}>
+                <CardHeader className={`bg-gray-50 border-b ${index === 0 ? 'bg-white' : ''}`}>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <CardTitle className="text-2xl">
+                        {entry.title === "Graduate Research Coach" ? (
+                          <a 
+                            href="https://www.graduateresearchcoach.com/" 
+                            className="hover:underline underline hover:text-blue-600"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {entry.title}
+                          </a>
+                        ) : entry.title === "Coastal Water Research Group" ? (
+                          <a 
+                            href="https://coastalwaterresearch.com/" 
+                            className="hover:underline underline hover:text-blue-600"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {entry.title}
+                          </a>
+                        ) : entry.title}
+                      </CardTitle>
+                      <CardDescription>{entry.company}</CardDescription>
+                    </div>
+                    <div className="h-12 w-12 rounded-full bg-gray-100 border-2 border-gray-100 flex items-center justify-center flex-shrink-0 ml-4 overflow-hidden p-0.5">
+                      {entry.imageUrl ? (
+                        <Image
+                          src={entry.imageUrl}
+                          alt={`${entry.title} logo`}
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-200 rounded-full" />
+                      )}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="font-medium">
+                  <p className="font-semibold text-indigo-600 text-lg">{entry.position}</p>
+                  <p className="text-base text-gray-700 mb-2">{entry.period}</p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    {entry.responsibilities.map((responsibility, index) => (
+                      <li key={index} className="pl-2">
+                        <span className="block pl-2 -indent-2">{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {entry.title === "Trident University International" && entry.period === "2018 to 2023" && (
+                    <Card className="mt-4 bg-gray-50/50">
+                      <CardContent className="pt-6">
+                        <div className="space-y-4">
+                          <div>
+                            <h3 className="font-bold text-md">Undergraduate Courses:</h3>
+                            <p className="text-sm">Environmental Health and Safety; Water Quality; Hazardous Wastes; Vector Control; Wastewater Management; Introduction to Epidemiology; Global Health and Sustainability; Industrial Hygiene and Occupational Health; Microbiology; Food Protection; Pest Control; Demography and Health; Senior Capstone</p>
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-md">Master Program Courses:</h3>
+                            <p className="text-sm">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-md">Doctoral Program Courses:</h3>
+                            <p className="text-sm">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="font-bold text-md">Master Program Courses:</h3>
-                          <p className="text-sm">Environmental Health Assessment; Environmental and Occupational Health Administration; Environmental and Occupational Epidemiology</p>
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-md">Doctoral Program Courses:</h3>
-                          <p className="text-sm">Epidemiology; Research Methods; Global Epidemiology; Qualitative Research; Current Issues in Global Health Research; Dissertation Seminar; Dissertation Research</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
-              </CardContent>
-            </Card>
-          </BlurFade>
+                      </CardContent>
+                    </Card>
+                  )}
+                </CardContent>
+              </Card>
+            </BlurFade>
+          </div>
         ))}
       </div>
     </div>

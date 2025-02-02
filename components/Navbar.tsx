@@ -20,12 +20,12 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="bg-[#a9a9a9]">
+    <nav className="bg-white py-.5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-14">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-2xl font-semibold text-black tracking-tight underline translate-y-1.5">
+              <Link href="/" className="text-2xl font-semibold text-black tracking-tight underline translate-y-1">
                 <FadeText text="Ryan H. Dwight, PhD"
                 direction="left" 
                 />

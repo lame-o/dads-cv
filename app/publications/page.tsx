@@ -155,7 +155,7 @@ export default function Publications() {
             <FadeText 
               text="Publications"
               className="text-4xl font-bold text-black tracking-tight"
-              direction="up"
+              direction="left"
             />
           </div>
         </div>

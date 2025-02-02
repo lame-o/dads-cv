@@ -23,7 +23,7 @@ export default function Personal() {
             <FadeText 
               text="Personal Interests"
               className="text-4xl font-bold text-black tracking-tight"
-              direction="up"
+              direction="left"
             />
           </div>
         </div>

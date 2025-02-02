@@ -145,7 +145,7 @@ export default function Talks() {
             <FadeText 
               text="Talks"
               className="text-4xl font-bold text-black tracking-tight"
-              direction="up"
+              direction="left"
             />
           </div>
         </div>
