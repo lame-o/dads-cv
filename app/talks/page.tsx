@@ -130,148 +130,161 @@ export default function Talks() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <FadeText 
-        text="Conference Talks"
-        className="text-4xl font-bold mb-6"
-        direction="up"
-      />
-      <Card>
-        <CardHeader className="pb-0">
-        </CardHeader>
-        <CardContent className="py-4">
-          <div className="space-y-4">
-            {talks.map((talk, index) => (
-              <FadeListItem key={index} delay={index * 0.1}>
-                <div className="pb-2 font-medium">
-                  <p className="font-bold text-lg">{talk.date}</p>
-                  <p className="text-base">{talk.event}</p>
-                  <p className="italic text-indigo-600">
-                    <span className="font-bold text-black">{talk.type}: </span>
-                    {talk.title === "The U.S. EPA Proposed Recreational Water Quality Criteria and the Potential Public Health Burden for Southern California" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2012_BWQWG_EPA_Criteria_SoCal_Health_Burden.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Amounts and Distribution of Recreational Beach Expenditures in Southern California" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_Amounts_DistributionBeachExpenditures.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Impacts of Climate Change and Urbanization on Coastal Water Quality in Southern CA" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_InfluenceClimateChange_Urbanization.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Blame the Moon: A Critical Analysis of \"Environmental Sources\" of Enterococci into Southern California Coastal Waters" ? (
-                      <a 
-                        href={talk.type === "Presented" 
-                          ? "https://coastalwaterresearch.com/documents/Talk_2011_H2O_Blame_the_Moon.pdf"
-                          : "https://coastalwaterresearch.com/documents/Poster_2011_EPA_Blame_the_Moon.pdf"}
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Health Risks Associated with Bathing in Southern California Coastal Waters" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Poster_2011_EPA_Health_Risk.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Health Risk of Bathing in Southern California Coastal Waters" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2009_EPA_HealthRisk.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "The Human Tide: Beach Attendance and Bathing Rates for Southern California" ? (
-                      <a 
-                        href={talk.date.includes("2009") 
-                          ? "https://coastalwaterresearch.com/documents/Talk_2009_EPA_Attendance.pdf"
-                          : talk.date.includes("2008")
-                            ? "https://coastalwaterresearch.com/documents/Talk_2008_BWQWG_Beach_Attendance.pdf"
-                            : "https://coastalwaterresearch.com/documents/Talk_2007_H2O_Beach_Attendance.pdf"}
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "What to do with the Enterococci standard?" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2006_World_Ocean_Conf_What_to_do_with_Enterococci.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "The Economic Burden from Illnesses Associated with Recreational Coastal Waters" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2005_H2O_Econ_Burden_of_Illness.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Risk and Severity of Recreational Water Associated Illnesses" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2005_OceanEmergencies_Risk_and_Severity.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "El Nino's Effect on Urban Runoff and Coastal Water Quality in Orange County, CA" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2001_AAAS_Climate_Water_Quality.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title === "Estimated health costs for illnesses associated with recreational contact with marine waters contaminated by urban runoff" ? (
-                      <a 
-                        href="https://coastalwaterresearch.com/documents/Talk_2001_Health_Costs_of_Illnesses.pdf"
-                        className="underline hover:text-blue-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {talk.title}
-                      </a>
-                    ) : talk.title}
-                  </p>
-                  {index < talks.length - 1 && (
-                    <hr className="mt-4 border-gray-400" />
-                  )}
-                </div>
-              </FadeListItem>
-            ))}
+      <div className="relative mt-16">
+        <div className="-translate-x-8 translate-y-2.5 absolute z-10 bottom-full left-8 bg-white px-16 py-4" 
+          style={{ 
+            width: 'fit-content',
+            clipPath: 'polygon(40px 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%)'
+          }}>
+          <div className="absolute inset-[11px] bg-[#d4d4d4]"
+            style={{
+              clipPath: 'polygon(36px 0%, calc(100% - 36px) 0%, 97% 100%, 3% 100%)'
+            }}>
           </div>
-        </CardContent>
-      </Card>
+          <div className="relative">
+            <FadeText 
+              text="Talks"
+              className="text-4xl font-bold text-black tracking-tight"
+              direction="up"
+            />
+          </div>
+        </div>
+        <Card className="relative z-0 py-4 bg-white">
+          <CardContent className="space-y-4">
+            <div className="space-y-4">
+              {talks.map((talk, index) => (
+                <FadeListItem key={index} delay={index * 0.1}>
+                  <div className="pb-2 font-medium">
+                    <p className=" text-base">{talk.date}</p>
+                    <p className="text-base">{talk.event}</p>
+                    <p className="italic font-semibold text-lg text-indigo-600">
+                      <span className="font-bold text-black">{talk.type}: </span>
+                      {talk.title === "The U.S. EPA Proposed Recreational Water Quality Criteria and the Potential Public Health Burden for Southern California" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2012_BWQWG_EPA_Criteria_SoCal_Health_Burden.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Amounts and Distribution of Recreational Beach Expenditures in Southern California" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_Amounts_DistributionBeachExpenditures.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Impacts of Climate Change and Urbanization on Coastal Water Quality in Southern CA" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2011_H2O_InfluenceClimateChange_Urbanization.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Blame the Moon: A Critical Analysis of \"Environmental Sources\" of Enterococci into Southern California Coastal Waters" ? (
+                        <a 
+                          href={talk.type === "Presented" 
+                            ? "https://coastalwaterresearch.com/documents/Talk_2011_H2O_Blame_the_Moon.pdf"
+                            : "https://coastalwaterresearch.com/documents/Poster_2011_EPA_Blame_the_Moon.pdf"}
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Health Risks Associated with Bathing in Southern California Coastal Waters" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Poster_2011_EPA_Health_Risk.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Health Risk of Bathing in Southern California Coastal Waters" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2009_EPA_HealthRisk.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "The Human Tide: Beach Attendance and Bathing Rates for Southern California" ? (
+                        <a 
+                          href={talk.date.includes("2009") 
+                            ? "https://coastalwaterresearch.com/documents/Talk_2009_EPA_Attendance.pdf"
+                            : talk.date.includes("2008")
+                              ? "https://coastalwaterresearch.com/documents/Talk_2008_BWQWG_Beach_Attendance.pdf"
+                              : "https://coastalwaterresearch.com/documents/Talk_2007_H2O_Beach_Attendance.pdf"}
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "What to do with the Enterococci standard?" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2006_World_Ocean_Conf_What_to_do_with_Enterococci.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "The Economic Burden from Illnesses Associated with Recreational Coastal Waters" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2005_H2O_Econ_Burden_of_Illness.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Risk and Severity of Recreational Water Associated Illnesses" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2005_OceanEmergencies_Risk_and_Severity.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "El Nino's Effect on Urban Runoff and Coastal Water Quality in Orange County, CA" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2001_AAAS_Climate_Water_Quality.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title === "Estimated health costs for illnesses associated with recreational contact with marine waters contaminated by urban runoff" ? (
+                        <a 
+                          href="https://coastalwaterresearch.com/documents/Talk_2001_Health_Costs_of_Illnesses.pdf"
+                          className="underline hover:text-blue-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {talk.title}
+                        </a>
+                      ) : talk.title}
+                    </p>
+                    {index < talks.length - 1 && (
+                      <hr className="mt-4 border-gray-400" />
+                    )}
+                  </div>
+                </FadeListItem>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
