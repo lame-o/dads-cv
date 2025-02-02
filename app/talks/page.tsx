@@ -143,10 +143,10 @@ export default function Talks() {
             {talks.map((talk, index) => (
               <FadeListItem key={index} delay={index * 0.1}>
                 <div className="pb-2 font-medium">
-                  <p className="font-bold text-indigo-600 text-lg">{talk.date}</p>
+                  <p className="font-bold text-lg">{talk.date}</p>
                   <p className="text-base">{talk.event}</p>
-                  <p className="italic text-base">
-                    <span className="font-bold">{talk.type}: </span>
+                  <p className="italic text-indigo-600">
+                    <span className="font-bold text-black">{talk.type}: </span>
                     {talk.title === "The U.S. EPA Proposed Recreational Water Quality Criteria and the Potential Public Health Burden for Southern California" ? (
                       <a 
                         href="https://coastalwaterresearch.com/documents/Talk_2012_BWQWG_EPA_Criteria_SoCal_Health_Burden.pdf"

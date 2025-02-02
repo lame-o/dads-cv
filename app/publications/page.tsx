@@ -153,8 +153,8 @@ export default function Publications() {
             {publications.map((pub, index) => (
               <FadeListItem key={index} delay={index * 0.1}>
                 <div className="pb-2 font-medium">
-                  <p className="font-bold text-indigo-600 text-lg">{pub.authors} ({pub.year})</p>
-                  <p className="italic text-base">
+                  <p className="font-bold text-lg">{pub.authors} ({pub.year})</p>
+                  <p className="italic text-base text-indigo-600">
                     {pub.title === "Impacts of variable precipitation on coastal water quality in southern California" ? (
                       <a 
                         href="https://coastalwaterresearch.com/documents/Paper_2011_Climate_Water_Quality.pdf"
