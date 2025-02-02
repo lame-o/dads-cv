@@ -27,7 +27,7 @@
     position: relative;
     padding: 0.5rem 1.5rem;
     margin-right: -27px;
-    background: linear-gradient(to bottom, #d4d4d4 0%, #d4d4d4 100%);
+    background: #aaaaaa;
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
     border-radius: 8px 8px 0 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,7 +41,7 @@
     content: '';
     position: absolute;
     inset: 3px;
-    background: #f5e6d3;
+    background: #d4d4d4;
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
     border-radius: 8px 8px 0 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,6 +51,11 @@
     position: relative;
     z-index: 1;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: black;
+  }
+
+  .nav-tab.active span {
+    color: white;
   }
 
   .nav-tab:nth-child(6) { z-index: 1; }
@@ -66,7 +71,7 @@
   }
 
   .nav-tab.active::before {
-    background: #f3f4f6;
+    background: #374051;
   }
 
   .nav-tab:hover {

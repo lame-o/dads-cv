@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-2xl font-semibold text-gray-900">
+              <Link href="/" className="text-2xl font-semibold text-black tracking-tight underline translate-y-2">
                 <FadeText text="Ryan H. Dwight, PhD"
                 direction="left" 
                 />
