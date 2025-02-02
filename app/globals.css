@@ -25,13 +25,13 @@
 
   .nav-tab {
     position: relative;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     margin-right: -27px;
     background: #aaaaaa;
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
     border-radius: 8px 8px 0 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    min-width: 120px;
+    min-width: 150px;
     text-align: center;
     transform-origin: bottom;
     transform: perspective(100px) rotateX(0deg) translateX(0);
@@ -52,10 +52,13 @@
     z-index: 1;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
   }
 
   .nav-tab.active span {
     color: white;
+    font-weight: 800;
   }
 
   .nav-tab:nth-child(6) { z-index: 1; }
